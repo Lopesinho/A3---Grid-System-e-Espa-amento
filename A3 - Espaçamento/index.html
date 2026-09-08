@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos Sócio Torcedor - Palmeiras</title>
+    <style>
+        :root {
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-xxl: 48px;
+            
+            --color-primary: #00482B;
+            --color-secondary: #002D62;
+            --color-accent: #018749;
+            --color-gold: #D4AF37;
+            --color-bg: #f4f7f4;
+            --color-card-bg: #ffffff;
+            --color-text: #333333;
+            --color-text-light: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .pricing-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+
+        .pricing-header h1 {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .pricing-header p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background-color: var(--color-card-bg);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 72, 43, 0.1);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--color-gold);
+            background: linear-gradient(to bottom, #ffffff, #faf9f2);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: var(--space-xl);
+            background-color: var(--color-gold);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-description {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin-bottom: var(--space-lg);
+            min-height: 40px;
+        }
+
+        .card-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-secondary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .card-price span {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: var(--color-text-light);
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+            flex-grow: 1;
+        }
+
+        .card-features li {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+        }
+
+        .card-features li::before {
+            content: "✔";
+            color: var(--color-accent);
+            font-weight: bold;
+            margin-right: var(--space-sm);
+        }
+
+        .card-button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: var(--space-md) var(--space-lg);
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            margin-top: auto;
+        }
+
+        .card-button:hover {
+            background-color: var(--color-accent);
+        }
+
+        .featured .card-button {
+            background-color: var(--color-secondary);
+        }
+
+        .featured .card-button:hover {
+            background-color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-container">
+        <header class="pricing-header">
+            <h1>Avanti - Planos de Sócio Torcedor</h1>
+            <p>Escolha o plano ideal para garantir seu lugar no Allianz Parque e apoiar o Verdão.</p>
+        </header>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 class="card-title">Verde</h3>
+                <p class="card-description">Para quem quer começar a fazer parte da nossa torcida com vantagens exclusivas.</p>
+                <div class="card-price">R$ 35<span>/mês</span></div>
+                <ul class="card-features">
+                    <li>Prioridade na compra de ingressos</li>
+                    <li>Desconto na Rede de Vantagens</li>
+                    <li>Revista digital mensal</li>
+                </ul>
+                <a href="#" class="card-button">Assinar Agora</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="badge">Mais Popular</div>
+                <h3 class="card-title">Platina</h3>
+                <p class="card-description">O plano favorito da torcida alviverde com ampla prioridade nos grandes jogos.</p>
+                <div class="card-price">R$ 90<span>/mês</span></div>
+                <ul class="card-features">
+                    <li>Alta prioridade na compra de ingressos</li>
+                    <li>Descontos maiores em parceiros</li>
+                    <li>Conteúdos exclusivos de bastidores</li>
+                    <li>Participação em sorteios oficiais</li>
+                </ul>
+                <a href="#" class="card-button">Assinar Agora</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3 class="card-title">Esmeralda</h3>
+                <p class="card-description">Experiência completa e máxima prioridade para quem vive o Palmeiras diariamente.</p>
+                <div class="card-price">R$ 150<span>/mês</span></div>
+                <ul class="card-features">
+                    <li>Máxima prioridade em todas as partidas</li>
+                    <li>Convites para experiências no CT</li>
+                    <li>Desconto máximo na Palmeiras Store</li>
+                    <li>Atendimento VIP prioritário</li>
+                </ul>
+                <a href="#" class="card-button">Assinar Agora</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

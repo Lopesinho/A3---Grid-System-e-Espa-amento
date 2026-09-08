@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Verdão - Notícias do Palmeiras</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f7f4;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .col-12 { grid-column: span 12; }
+        .col-9  { grid-column: span 9; }
+        .col-3  { grid-column: span 3; }
+
+        header.col-12 {
+            background: linear-space(135deg, #002D62, #00482B);
+            background-color: #00482B;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #A2D9CE;
+            font-size: 1rem;
+        }
+
+        main.col-9 {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid #00482B;
+        }
+
+        main h2 {
+            color: #00482B;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        aside.col-3 {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        aside h3 {
+            color: #00482B;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #E8F8F5;
+            padding-bottom: 8px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin-bottom: 8px;
+        }
+
+        aside ul li a {
+            color: #2E7D32;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        aside ul li a:hover {
+            color: #00482B;
+            text-decoration: underline;
+        }
+
+        footer.col-12 {
+            background: #1B4D3E;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="col-12">
+            <h1>Palmeiras Sempre</h1>
+            <p>O seu portal diário de notícias do Verdão</p>
+        </header>
+
+        <main class="col-9">
+            <h2>Preparação intensa para o próximo clássico</h2>
+            <p>O elenco palmeirense se apresentou na Academia de Futebol nesta manhã para iniciar a preparação de olho no confronto decisivo do fim de semana. Com trabalhos táticos em campo reduzido, a comissão técnica focou na intensidade e na rápida transição de jogadas.</p>
+            <p>O grupo segue focado em manter a liderança e buscar mais uma vitória importante dentro de casa, contando com o apoio maciço da torcida que esgotou os ingressos antecipadamente.</p>
+        </main>
+
+        <aside class="col-3">
+            <h3>Destaques</h3>
+            <ul>
+                <li><a href="#">Próximos Jogos</a></li>
+                <li><a href="#">Tabela do Campeonato</a></li>
+                <li><a href="#">Bastidores do CT</a></li>
+                <li><a href="#">Elenco Atual</a></li>
+            </ul>
+        </aside>
+
+        <footer class="col-12">
+            <p>&copy; 2026 Palmeiras Sempre. Todos os direitos reservados. Avanti Palestra!</p>
+        </footer>
+    </div>
+
+</body>
+</html>
